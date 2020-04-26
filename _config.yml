@@ -1,9 +1,1 @@
 title: "ODK"
-defaults:
-  - scope:
-      path: "/docs/dist"
-      type: pages
-    values:
-      layout: "default"
-      og_type: article
-      type: article
