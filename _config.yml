@@ -1,4 +1,3 @@
-deploy:
-  type: git
-  repository: https://github.com/zlongCoding/ve-vue.git
-  branch: master
+locale                   : "en-US"
+title                    : "ve-ui"
+baseurl: '/docs/dist'
