@@ -93,13 +93,14 @@ export default {
         },
         left: {
           top: top + window.scrollY + (height - contentHeight) / 2,
-          left: left + window.screenX 
+          left: left - 5
         },
         right: {
           top: top + window.scrollY + (height - contentHeight) / 2,
-          left: left + width + window.screenX 
+          left: left + width 
         }
       };
+      console.log(this.position)
       contentWrapper.style.top = positions[this.position].top + "px";
       contentWrapper.style.left = positions[this.position].left + "px";
     },
