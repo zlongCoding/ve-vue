@@ -5,7 +5,7 @@
                 <div class="menu">
                     <i class="iconfont icon-lightning2"></i>
                     <ul>
-                        <li><a href="https://github.com/no1harm/Hyper-demo" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/zlongCoding/ve-vue" target="_blank">GitHub</a></li>
                         <li><a href="/get-start/">Document</a></li>
                         <li></li>
                     </ul>
@@ -14,7 +14,7 @@
             <div class="home-content">
                 <div class="banner">
                     <div>
-                        <span>Hyper-UI</span>
+                        <span>ve-UI</span>
                     </div>
                     <div>
                         <p>一套基于 Vue2.0 的 UI 桌面端组件库</p>
@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="footerWrapper">
-            <p>你可以使用 Hyper-UI 做什么</p>
-            <div class="advantage">
+            <p>你可以使用 ve-UI 做什么</p>
+            <!-- <div class="advantage">
                 <div class="tips">
                     <i class="iconfont icon-component"></i>
                     <p>使用一些好看的组件  如 Button / Input </p>
@@ -41,7 +41,7 @@
                     <i class="iconfont icon-popover"></i>                    
                     <p>可定制更多的组件内容</p>
                 </div>
-            </div>
+            </div> -->
             <p class="copyright">MIT Licensed | Copyright © 2018-present no1hram</p>
         </div>
     </div>
@@ -73,7 +73,7 @@ export default {
     .contentWrapper{
         width: 100%;
         min-height: 500px;
-        background-color: #FBDF51;
+        // background-color: #1989fa;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -153,7 +153,7 @@ export default {
                     align-items: center;
                     color: #fff;
                     font-size: 12px;
-                    background-color: #337480;
+                    background-color: #1989fa;
                     height: 42px;
                     width: 112px;
                     cursor: pointer;
@@ -203,7 +203,7 @@ export default {
                     padding-top: 1em;
                     font-size: 2.6em; 
                     vertical-align: -0.15em;
-                    fill: #337480;
+                    fill: #1989fa;
                     overflow: hidden;
                 }
                 p{  
@@ -213,7 +213,7 @@ export default {
                     max-width: 60%;
                 }
                 &:hover{
-                    background-color: #FBDF51;
+                    background-color: #1989fa;
                     transform: translateY(-10px);
                     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
                 }
@@ -231,7 +231,7 @@ export default {
         .contentWrapper{
             width: 100%;
             min-height: 500px;
-            background-color: #FBDF51;
+            // background-color: #1989fa;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -312,7 +312,7 @@ export default {
                         align-items: center;
                         color: #fff;
                         font-size: 12px;
-                        background-color: #337480;
+                        background-color: #1989fa;
                         height: 42px;
                         width: 112px;
                         cursor: pointer;
@@ -362,7 +362,7 @@ export default {
                         padding-top: 1em;
                         font-size: 2.6em; 
                         vertical-align: -0.15em;
-                        fill: #337480;
+                        fill: #1989fa;
                         overflow: hidden;
                     }
                     p{  
@@ -372,7 +372,7 @@ export default {
                         max-width: 85%;
                     }
                     &:hover{
-                        background-color: #FBDF51;
+                        background-color: #337480;
                         transform: translateY(-10px);
                         box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
                     }
