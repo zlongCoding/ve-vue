@@ -2,6 +2,7 @@ module.exports = {
   title: "Hello VuePress",
   description: "Just playing around",
   port: 8089,
+  base: '/ve-vue/',
   themeConfig: {
     nav: [
       // { text: '首页', link: '/' },
