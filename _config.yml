@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 title: "ODK"
-baseurl: "/docs/dist"
+baseurl: "/"
 repository: "/docs/dist"
