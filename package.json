@@ -2,14 +2,25 @@
   "name": "ve-vue",
   "version": "0.1.0",
   "description": "ve-vue",
-  "main": "index.js",
+  "main": "dist/veUI.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "build:prod": "cross-env NODE_ENV=production webpack --hide-modules --progress --config build/webpack.prod.conf.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "zhanglong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zlongCoding/ve-vue.git"
+  },
+  "keywords": [
+    "ve-vue",
+    "veUI",
+    "定制化",
+    "可修改",
+    "vue component"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
