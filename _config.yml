@@ -1,3 +1,9 @@
 title: "ODK"
-baseurl: "/"
-repository: /docs/dist
+defaults:
+  - scope:
+      path: "/docs/dist"
+      type: pages
+    values:
+      layout: "default"
+      og_type: article
+      type: article
