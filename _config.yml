@@ -1,3 +1,4 @@
-locale                   : "en-US"
-title                    : "ve-ui"
-baseurl: '/docs/dist'
+theme: jekyll-theme-cayman
+title: "ODK"
+baseurl                  : "/docs/dist"
+repository               : "docs/dist"
