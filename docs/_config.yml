@@ -1,2 +1,4 @@
-- type: git
-  root: /docs/dist/
+deploy:
+  type: git
+  repository: https://github.com/zlongCoding/ve-vue.git
+  branch: master
