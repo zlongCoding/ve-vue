@@ -1,18 +1,17 @@
 {
   "name": "ve-vue",
-  "version": "0.1.1",
+  "version": "0.1.9",
   "description": "ve-vue",
-  "main": "dist/veUI.js",
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "build:prod": "cross-env NODE_ENV=production webpack --hide-modules --progress --config build/webpack.prod.conf.js"
-  },
-  "author": "zhanglong",
-  "license": "MIT",
+  "main": "lib/index.js",
+  "style": "package/index.css",
+  "files": [
+    "lib",
+    "package",
+    "static"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zlongCoding/ve-vue.git"
+    "url": "git+https://github.com/zlongCoding/ve-vue.git"
   },
   "keywords": [
     "ve-vue",
@@ -21,129 +20,43 @@
     "可修改",
     "vue component"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "author": "zhanglong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zlongCoding/ve-vue/issues"
   },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --fix",
-      "git add"
-    ]
+  "homepage": "https://github.com/zlongCoding/ve-vue#readme",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "build:prod": "cross-env NODE_ENV=production webpack --hide-modules --progress --config build/webpack.prod.conf.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name index --dest package lib/index.js"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.7",
-    "@babel/runtime": "^7.9.2",
-    "cache-loader": "^4.1.0",
-    "express": "^4.17.1",
-    "happypack": "^5.0.1",
-    "highlight.js": "^10.0.0"
+    "ve-vue": "^0.1.9",
+    "vue": "^2.6.10",
+    "vuepress": "^1.4.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@tweenjs/tween.js": "^18.5.0",
-    "@vue/component-compiler-utils": "^3.1.2",
-    "@vue/test-utils": "^1.0.0-beta.33",
-    "autoprefixer": "^9.7.6",
-    "babel-eslint": "^10.1.0",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-jest": "^25.4.0",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-dynamic-import-node": "^2.3.3",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "chalk": "^4.0.0",
-    "chokidar": "^3.3.1",
-    "clipboard": "^2.0.6",
-    "copy": "^0.3.2",
-    "copy-webpack-plugin": "^5.1.1",
-    "coveralls": "^3.0.13",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.5.2",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "expect": "^25.4.0",
-    "file-loader": "^6.0.0",
-    "folder-hash": "^3.3.0",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "google-code-prettify": "^1.0.5",
-    "has": "^1.0.3",
-    "html-webpack-plugin": "^4.2.0",
-    "inquirer": "^7.1.0",
-    "intersection-observer": "^0.9.0",
-    "istanbul-instrumenter-loader": "^3.0.1",
-    "jest": "^25.4.0",
-    "jest-serializer-vue": "^2.0.2",
-    "jsdom": "^16.2.2",
-    "jsdom-global": "^3.0.2",
-    "marked": "^1.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "mocha": "^7.1.1",
-    "mocha-webpack": "^1.1.0",
-    "moment": "^2.24.0",
-    "node-filelist": "^1.0.0",
-    "node-notifier": "^7.0.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.14.0",
-    "npm-run-all": "^4.1.5",
-    "nyc": "^15.0.1",
-    "offline-plugin": "^5.0.7",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "ora": "^4.0.4",
-    "os": "^0.1.1",
-    "path": "^0.12.7",
-    "portfinder": "^1.0.25",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-url": "^8.0.0",
-    "progress-bar-webpack-plugin": "^2.1.0",
-    "qrcode": "^1.4.4",
-    "raw-loader": "^4.0.1",
-    "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
-    "sass-resources-loader": "^2.0.3",
-    "semver": "^7.3.2",
-    "shelljs": "^0.8.3",
-    "style-loader": "^1.1.4",
-    "svg-sprite-loader": "^4.2.5",
-    "three": "^0.115.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.0",
-    "vue": "^2.6.11",
-    "vue-i18n": "^8.17.3",
-    "vue-jest": "^3.0.5",
-    "vue-lazyload": "^1.3.3",
-    "vue-loader": "^15.9.1",
-    "vue-router": "^3.1.6",
-    "vue-style-loader": "^4.1.2",
-    "vueg": "^1.4.5",
-    "vuepress": "^1.4.1",
-    "webpack": "^4.43.0",
-    "webpack-build-notifier": "^2.0.0",
-    "webpack-bundle-analyzer": "^3.7.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2",
-    "webpack-node-externals": "^1.7.2"
-  },
-  "browserslist": [
-    "> 3%",
-    "Android >= 4",
-    "iOS >= 8"
-  ],
-  "nyc": {
-    "include": [
-      "src/packages/**/*.vue"
-    ],
-    "instrument": false,
-    "sourceMap": false
+    "vue-template-compiler": "^2.5.21"
   }
 }

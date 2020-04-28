@@ -14,10 +14,10 @@ title: 快速上手
 ```js
 import Vue from 'vue';
 import App from './App.vue';
-import HyperUI from 've-vue';
+import VeUI from 've-vue';
 import 've-vue/dist/index.css'
 
-Vue.use(HyperUI);
+Vue.use(VeUI);
 
 new Vue({
   el: '#app',
@@ -25,7 +25,7 @@ new Vue({
 });
 ```
 
-以上代码便完成了 HyperUI 的引入。需要注意的是，样式文件需要单独引入。
+以上代码便完成了 VeUI 的引入。需要注意的是，样式文件需要单独引入。
 
 ## 按需引用
 
@@ -50,7 +50,7 @@ new Vue({
 
 <!-- ## 特别提醒
 
-在使用 HyperUI 时，您需要使用 `border-box` 盒模型，否则会影响样式。CSS 代码示例：
+在使用 VeUI 时，您需要使用 `border-box` 盒模型，否则会影响样式。CSS 代码示例：
 
 ```css
 *, *::before, *::after {
@@ -60,6 +60,6 @@ new Vue({
 }
 ``` -->
 
-<!-- 至此，一个基于 Vue 和 HyperUI 的开发环境已经搭建完毕，现在就可以编写代码了。 :tada: :tada: -->
+<!-- 至此，一个基于 Vue 和 VeUI 的开发环境已经搭建完毕，现在就可以编写代码了。 :tada: :tada: -->
 
 <!-- 各个组件的使用方法请参阅它们各自的文档。 -->

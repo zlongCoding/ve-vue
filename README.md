@@ -7,3 +7,4 @@ npm install ve-vue -S
 yarn add ve-vue
 ```
 [项目地址](https://zlongcoding.github.io/ve-vue)
+###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md)

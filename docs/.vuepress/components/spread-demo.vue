@@ -1,6 +1,6 @@
 <template>
   <SwitchCode :content="content">
-      <hy-button @click="show = !show">Click Me</hy-button>
+      <button @click="show = !show">Click Me</button>
       <hy-spread>
         <div class="spread-bg" v-if="show"></div>
       </hy-spread>
@@ -9,8 +9,8 @@
 
 
 <script>
-import Button from "../../../src/packages/button/button.vue";
-import Spread from "../../../src/packages/spread/spread";
+// import Button from "../../../src/packages/button/button.vue";
+import Spread from "../../../lib/spread/src/spread";
 import SwitchCode from './component/SwitchCode'
 const content = `
 <hy-button @click="show = !show">Click Me</hy-button>
@@ -44,7 +44,7 @@ $bg-yellow:#409eff;
 </style>`
 export default {
   components: {
-    "hy-button": Button,
+    // "hy-button": Button,
     "hy-spread": Spread,
     'SwitchCode':SwitchCode
   },

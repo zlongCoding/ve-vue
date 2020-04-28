@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Spread from "../../../../src/packages/spread/spread";
+import Spread from "../../../../lib/spread/src/spread";
 
 export default {
   components: {
