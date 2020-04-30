@@ -2,7 +2,7 @@ module.exports = {
   title: "Hello VuePress",
   description: "Just playing around",
   port: 8089,
-  base:  process.env.NODE_ENV === 'development' ? '/' : '/ve-vue/',
+  base: process.env.NODE_ENV === "development" ? "/" : "/ve-vue/",
   themeConfig: {
     nav: [
       // { text: '首页', link: '/' },
@@ -29,6 +29,7 @@ module.exports = {
           "/components/tooltip.md",
           // "/components/toast.md",
           "/components/spread.md",
+          "/components/switch.md",
         ],
       },
     ],
