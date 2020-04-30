@@ -12,35 +12,8 @@
 export default {
   name: "ve-button",
 
-  inject: {
-    elForm: {
-      default: ""
-    },
-    elFormItem: {
-      default: ""
-    }
-  },
-
   props: {
-    type: {
-      type: String,
-      default: "default"
-    },
-    size: String,
-    icon: {
-      type: String,
-      default: ""
-    },
-    nativeType: {
-      type: String,
-      default: "button"
-    },
-    loading: Boolean,
-    disabled: Boolean,
-    plain: Boolean,
-    autofocus: Boolean,
-    round: Boolean,
-    circle: Boolean,
+
     click: {
       type: Function,
       default: () => null
@@ -48,20 +21,12 @@ export default {
   },
 
   computed: {
-    _elFormItemSize () {
-      return (this.elFormItem || {}).elFormItemSize
-    },
-    buttonSize () {
-      return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size
-    },
-    buttonDisabled () {
-      return this.disabled || (this.elForm || {}).disabled
-    }
+
   },
 
   methods: {
-    handleClick (evt) {
-      this.$emit("click", evt)
+    handleClick (e) {
+      this.$emit("click", e)
     }
   }
 }
