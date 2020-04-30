@@ -21,6 +21,7 @@ module.exports = {
           "/components/tooltip.md",
           "/components/spread.md",
           "/components/switch.md",
+          "/components/checkbox.md",
           "/components/button.md",
         ],
       },

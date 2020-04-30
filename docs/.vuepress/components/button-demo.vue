@@ -1,7 +1,7 @@
 
 <template>
   <SwitchCode :content="content">
-    <ve-button @click="clickBtn">德玛西亚</ve-button>
+    <ve-button id="fawf" @click="clickBtn">德玛西亚</ve-button>
     <ve-button :disabled="true">面对疾风吧</ve-button>
     <ve-button :circle="true" @click="clickBtn">恕瑞玛，你的皇帝回来了</ve-button>
     <div>{{num}}</div>
