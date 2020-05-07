@@ -5,7 +5,11 @@
         <p>change事件 ---- value= {{value}}</p>
         <p>input事件 ---- value= {{inputValue}}</p>
       </div>
-      <ve-slider :min="0" :max="100" @change="handlerChange" v-model="inputValue" />
+      <div class="ve-slider-dome-2">
+        <ve-button @click="changeValue = inputValue - 1">-</ve-button>
+        <ve-button @click="changeValue = inputValue + 1">+</ve-button>
+       </div>
+      <ve-slider :min="0" :max="100" :changeValue="changeValue"  @change="handlerChange" v-model="inputValue" />
     </SwitchCode>
     <SwitchCode :content="content1">
       <p>加入步长</p>
@@ -29,6 +33,7 @@
 <script>
 // import Button from "../../../src/packages/button/button.vue";
 import Slider from "../../../lib/slider/src/slider";
+import Button from "../../../lib/button/src/button";
 import SwitchCode from "./component/SwitchCode";
 const content = `
  <ve-slider :min="0" :max="100" @change="handlerChange" v-model="inputValue"/>
@@ -71,9 +76,12 @@ export default {
 `;
 export default {
   components: {
-    // "hy-button": Button,
+    "ve-button": Button,
     "ve-slider": Slider,
     SwitchCode: SwitchCode
+  },
+  mounted () {
+  
   },
   data() {
     return {
@@ -82,7 +90,8 @@ export default {
       value: 0,
       inputValue: 0,
       stepvalue: 0,
-      stepinputValue: 0
+      stepinputValue: 0,
+      changeValue: 0
     };
   },
   methods: {
@@ -113,5 +122,8 @@ $bg-yellow: #409eff;
 }
 .ve-slider-dome-1 {
   margin-bottom: 10px;
+}
+.ve-slider-dome-2 {
+  margin-bottom: 15px;
 }
 </style>

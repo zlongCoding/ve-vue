@@ -26,6 +26,10 @@ export default {
       type: Number,
       default: 1
     },
+    changeValue: {
+      type: Number,
+      default: 0
+    },
     change: {
       type: Function,
       default: () => 0
@@ -48,6 +52,10 @@ export default {
   watch: {
     firstValue (val) {
       this.$emit("change", val)
+    },
+    changeValue (val) {
+      this.firstValue = val
+      this.emitHandler()
     }
   },
   components: {
@@ -78,8 +86,7 @@ export default {
   mounted () {
     this.resetSize()
     window.addEventListener("resize", this.resetSize)
-    this.$emit("input", this.firstValue)
-    this.$emit("change", this.firstValue)
+    this.emitHandler()
   },
 
   beforeDestroy () {
@@ -95,7 +102,12 @@ export default {
     },
     emitChangeSlider () {
       this.$emit("input", this.firstValue)
+    },
+    emitHandler () {
+      this.$emit("input", this.firstValue)
+      this.$emit("change", this.firstValue)
     }
+
   }
 }
 </script>
