@@ -4,6 +4,7 @@
       type="checkbox"
       :id="id"
       :disabled="disabled"
+      :required="required"
       @change="onChange"
       :checked="state"
     />
@@ -21,6 +22,10 @@
 </template>
 <script>
 export default {
+  model: {
+    prop: "modelValue",
+    event: "input"
+  },
   data () {
     return {
       state: this.checked
@@ -39,23 +44,19 @@ export default {
       type: Boolean,
       default: false
     },
-    disabled: {
+    required: {
       type: Boolean,
       default: false
     },
-    change: {
-      type: Function,
-      default: () => null
-    },
-    value: [String, Number, Boolean, Object, Array]
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     onChange (e) {
       console.log(e.target.checked)
-      this.$emit("change", {
-        status: e.target.checked,
-        value: this.value
-      })
+      this.$emit("input", e.target.checked)
     }
   },
   created () {

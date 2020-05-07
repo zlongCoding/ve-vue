@@ -1,9 +1,9 @@
 <template>
   <SwitchCode :content="content">
-      <button @click="show = !show">Click Me</button>
-      <hy-spread>
-        <div class="spread-bg" v-if="show"></div>
-      </hy-spread>
+    <button @click="show = !show">Click Me</button>
+    <ve-spread>
+      <div class="spread-bg" v-if="show"></div>
+    </ve-spread>
   </SwitchCode>
 </template>
 
@@ -11,20 +11,17 @@
 <script>
 // import Button from "../../../src/packages/button/button.vue";
 import Spread from "../../../lib/spread/src/spread";
-import SwitchCode from './component/SwitchCode'
+import SwitchCode from "./component/SwitchCode";
 const content = `
-<hy-button @click="show = !show">Click Me</hy-button>
-<hy-spread>
+<ve-button @click="show = !show">Click Me</ve-button>
+<ve-spread>
     <div class="spread-bg" v-if="show"></div>
-</hy-spread>
+</ve-spread>
 <script>
 import {Spread,Button} from ve-vue
 
-xport default {
-    components:{
-        'hy-button':Button,
-        'hy-spread':Spread
-    },
+export default {
+  
     data(){
         return{
             show:false
@@ -32,21 +29,12 @@ xport default {
     }
 }
 <script>
-<style lang="scss" scoped>
-$bg-yellow:#409eff;
-.spread-bg{
-    margin: 10px auto;
-    width: 100%;
-    height: 100px;
-    border-radius: 4px;
-    background-color: $bg-yellow;
-}
-</style>`
+`;
 export default {
   components: {
-    // "hy-button": Button,
-    "hy-spread": Spread,
-    'SwitchCode':SwitchCode
+    // "ve-button": Button,
+    "ve-spread": Spread,
+    SwitchCode: SwitchCode
   },
   data() {
     return {

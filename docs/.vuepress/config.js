@@ -22,6 +22,7 @@ module.exports = {
           "/components/spread.md",
           "/components/switch.md",
           "/components/checkbox.md",
+          "/components/radio.md",
           "/components/button.md",
           "/components/slider.md",
         ],

@@ -1,11 +1,12 @@
 
 <template>
   <SwitchCode :content="content">
-      <div class="switch-status"><ve-switch inactiveText="开" activeText="关"  @change="hanlderChange">
-      </ve-switch>
-      
-      <div class="result">状态： {{text}}</div></div>
-      <ve-switch :width="80" :styleType="false" inactiveText="开" activeText="关" />
+    <div class="switch-status">
+      <ve-switch inactiveText="开" activeText="关" @change="hanlderChange"></ve-switch>
+
+      <div class="result">状态： {{text}}</div>
+    </div>
+    <ve-switch :width="80" :styleType="false" inactiveText="开" activeText="关" />
   </SwitchCode>
 </template>
 
@@ -13,22 +14,18 @@
 <script>
 // import Button from "../../../src/packages/button/button.vue";
 import Switch from "../../../lib/switch/src/switch";
-import SwitchCode from './component/SwitchCode'
+import SwitchCode from "./component/SwitchCode";
 const content = `
     <div class="switch-status">
       <ve-switch inactiveText="开" activeText="关"  @change="hanlderChange">
-      </ve-switch>
-      
-      <div class="result">状态： {{text}}</div>
+    </ve-switch>
     </div>
+      
+    <div class="result">状态： {{text}}</div>
     <ve-switch :width="80" :styleType="false" inactiveText="开" activeText="关" />
 
-import {Switch} from ve-vue
 
-xport default {
-    components:{
-        've-switch':Switch
-    },
+export default {
     data(){
         return{
             text: '开'
@@ -41,23 +38,23 @@ xport default {
   }
 }
 <script>
-`
+`;
 export default {
   components: {
     // "hy-button": Button,
     "ve-switch": Switch,
-    'SwitchCode':SwitchCode
+    SwitchCode: SwitchCode
   },
   data() {
     return {
       content: content.trim(),
       showCode: false,
-      text: '开'
+      text: "开"
     };
   },
   methods: {
-    hanlderChange(val){
-       this.text = val ? '关' : '开'
+    hanlderChange(val) {
+      this.text = val ? "关" : "开";
     }
   }
 };
@@ -72,12 +69,12 @@ $bg-yellow: #409eff;
   border-radius: 4px;
   background-color: $bg-yellow;
 }
-.switch-status{
+.switch-status {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.switch-status .result{
+.switch-status .result {
   margin-left: 40px;
 }
 </style>

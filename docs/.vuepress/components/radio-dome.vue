@@ -1,48 +1,63 @@
 
 <template>
   <SwitchCode :content="content">
-    <ve-button id="fawf" @click="clickBtn">德玛西亚</ve-button>
-    <ve-button :disabled="true">面对疾风吧</ve-button>
-    <ve-button :circle="true" @click="clickBtn">恕瑞玛，你的皇帝回来了</ve-button>
-    <div>{{num}}</div>
+    <p>
+      <strong>Value:</strong>
+      {{ radioValue }}
+    </p>
+    <ve-radio name="radio-1" checked value="yes" v-model="radioValue">yes</ve-radio>
+    <div></div>
+    <ve-radio name="radio-1" value="no" v-model="radioValue" >
+      <span>no</span>
+    </ve-radio>
   </SwitchCode>
 </template>
 
 
 <script>
 // import Button from "../../../src/packages/button/button.vue";
-import Button from "../../../lib/button/src/button";
+import Radio from "../../../lib/radio/src/radio";
 import SwitchCode from "./component/SwitchCode";
 const content = `
-   <ve-button  @click="clickBtn">德玛西亚</ve-button>
-     <ve-button :disabled="true">面对疾风吧</ve-button>
-     <ve-button :circle="true" @click="clickBtn">来啊互相伤害</ve-button>
-     <div>{{num}}</div>
+     <p>
+      <strong>Value:</strong>
+      {{ radioValue }}
+    </p>
+    <ve-radio name="radio-1" checked value="yes" v-model="radioValue">yes</ve-radio>
+    <div></div>
+    <ve-radio name="radio-1" value="no" v-model="radioValue">
+      <span>no</span>
+    </ve-radio>
 
 
 export default {
+    
+    data(){
+        return{
+           radioValue: ''
+        }
+    },
+ 
 }
 <script>
 `;
 export default {
   components: {
     // "hy-button": Button,
-    "ve-button": Button,
+    "ve-radio": Radio,
     SwitchCode: SwitchCode
   },
   data() {
     return {
       content: content.trim(),
       showCode: false,
-      num: 1
+      text: "开",
+      radioValue: true
     };
   },
   methods: {
     hanlderChange(val) {
       this.text = val ? "关" : "开";
-    },
-    clickBtn() {
-      this.num += 1;
     }
   }
 };
