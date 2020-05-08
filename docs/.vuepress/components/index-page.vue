@@ -14,10 +14,10 @@
             <div class="home-content">
                 <div class="banner">
                     <div>
-                        <span>ve-UI</span>
+                        <span>ve-ui</span>
                     </div>
                     <div>
-                        <p>一套基于 Vue2.0 的 UI 桌面端组件库</p>
+                        <p>Vue UI 组件库</p>
                     </div>
                     <a :href="`${url}get-start/`"><div class="startBtn">快速上手</div></a>
                 </div>
@@ -26,9 +26,9 @@
                 </div>
             </div>
         </div>
-        <div class="footerWrapper">
+        <!-- <div class="footerWrapper">
             <p>你可以使用 ve-UI 做什么</p>
-            <!-- <div class="advantage">
+            <div class="advantage">
                 <div class="tips">
                     <i class="iconfont icon-component"></i>
                     <p>使用一些好看的组件  如 Button / Input </p>
@@ -41,9 +41,9 @@
                     <i class="iconfont icon-popover"></i>                    
                     <p>可定制更多的组件内容</p>
                 </div>
-            </div> -->
+            </div>
             <p class="copyright">MIT Licensed | Copyright © 2018-present no1hram</p>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -96,7 +96,7 @@ export default {
                     display: flex;
                     padding: 0;
                     li a {
-                        font-size: 12px;
+                        font-size: 16px;
                         color:#615A36;
                         font-weight: bold;
                         padding-right: 30px;
@@ -159,13 +159,14 @@ export default {
                     justify-content: center;
                     align-items: center;
                     color: #fff;
-                    font-size: 12px;
+                    font-size: 18px;
                     background-color: #1989fa;
                     height: 42px;
                     width: 112px;
                     cursor: pointer;
                     &:hover{
-                        background-color: #1f5e68;
+                        // background-color: #1f5e68;
+                        opacity: .8;
                         box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.3);
                     }
                 }

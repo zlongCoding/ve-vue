@@ -16,3 +16,4 @@ sidebarDepth: 2
 | circle      | 是否是圆角 | Boolean | `true|false` |  false |
 | autofocus      | 是否自动地获得焦点 | Boolean | `true|false` |  false |
 | type      | 按钮的类型 | String | `button reset submit` |  button |
+|click| 点击事件 | Function | (e) => null | (e) => null  |

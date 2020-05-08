@@ -23,6 +23,7 @@ module.exports = {
           "/components/switch.md",
           "/components/checkbox.md",
           "/components/radio.md",
+          "/components/pagination.md",
           "/components/button.md",
           "/components/slider.md",
         ],
