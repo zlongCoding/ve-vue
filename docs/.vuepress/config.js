@@ -6,12 +6,12 @@ module.exports = {
   base: process.env.NODE_ENV === "development" ? "/" : "/ve-vue/",
   themeConfig: {
     nav: [
-      // { text: '首页', link: '/' },
+      { text: "github", link: "https://github.com/zlongCoding/ve-vue/" },
       // { text: '文档', link: '  /' },
       // { text: '交流', link: '/' }
     ],
     sidebar: [
-      "/introduce/",
+      "/",
       {
         title: "入门",
         children: ["/install/", "/get-start/"],
