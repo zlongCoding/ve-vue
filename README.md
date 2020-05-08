@@ -10,6 +10,7 @@ npm install ve-vue -S 或者 yarn add ve-vue
 [pagination分页源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/pagination)
 
 [pagination分页dome](https://zlongcoding.github.io/ve-vue/components/pagination.html)
+
 ![分页](./github/image/pagination/1.gif)
 ![分页](./github/image/pagination/2.gif)
 ![分页](./github/image/pagination/3.gif)
