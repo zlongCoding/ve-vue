@@ -30,7 +30,9 @@ npm install ve-vue -S 或者 yarn add ve-vue
 >如果样式不行，改一下css就好了
 
 [radio源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/radio)
+
 [radio dome](https://zlongcoding.github.io/ve-vue/components/radio.html)
+
 ![radio单选按钮](./github/image/radio/1.gif)
 
 [项目地址](https://zlongcoding.github.io/ve-vue)
