@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $bg-yellow: #409eff;
 .checkbox-bg {
   margin: 10px auto;
