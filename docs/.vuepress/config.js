@@ -3,7 +3,7 @@ module.exports = {
   description: "vue ui组件库，自定义，可拆分的组件库",
   port: 8089,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
-  base: process.env.NODE_ENV === "development" ? "/" : "/ve-vue/",
+  base: process.env.NODE_ENV === "development" ? "/ve-vue/" : "/ve-vue/",
   themeConfig: {
     nav: [
       { text: "github", link: "https://github.com/zlongCoding/ve-vue/" },
