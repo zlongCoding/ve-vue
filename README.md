@@ -28,7 +28,7 @@ npm install ve-vue -S 或者 yarn add ve-vue
 ![slider滑块](./github/image/slider/1.gif)
 ![slider滑块](./github/image/slider/2.gif)
 ## vue radio 单选按钮
->如果样式不行，改一下css就好了
+>自定义的话，改一下css就好了
 
 [radio源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/radio)
 
@@ -36,7 +36,7 @@ npm install ve-vue -S 或者 yarn add ve-vue
 
 ![radio单选按钮](./github/image/radio/1.gif)
 ## vue checkbox 复选框
->如果样式不行，改一下css就好了
+>自定义的话，改一下css就好了
 
 [checkbox源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/checkbox)
 
