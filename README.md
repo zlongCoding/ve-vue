@@ -12,8 +12,7 @@ npm install ve-vue -S 或者 yarn add ve-vue
 [pagination分页源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/pagination)
 
 [pagination分页dome](https://zlongcoding.github.io/ve-vue/components/pagination.html)
-```
-```
+
 ![分页](./github/image/pagination/1.gif)
 ![分页](./github/image/pagination/2.gif)
 ![分页](./github/image/pagination/3.gif)
@@ -36,6 +35,14 @@ npm install ve-vue -S 或者 yarn add ve-vue
 [radio dome](https://zlongcoding.github.io/ve-vue/components/radio.html)
 
 ![radio单选按钮](./github/image/radio/1.gif)
+## vue checkbox 复选框
+>如果样式不行，改一下css就好了
+
+[checkbox源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/checkbox)
+
+[checkbox dome](https://zlongcoding.github.io/ve-vue/components/checkbox.html)
+
+![checkbox单选按钮](./github/image/checkbox/1.gif)
 
 
 <!-- ###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md) -->
