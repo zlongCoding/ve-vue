@@ -32,7 +32,6 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name index --dest package lib/index.js"
   },
-  "sideEffects": false,
   "dependencies": {
     "ve-vue": "0.2.1",
     "vue": "^2.6.10",
