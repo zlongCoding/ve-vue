@@ -14,6 +14,8 @@ import Button from "../../../lib/button/src/button";
 import Spread from "../../../lib/spread/src/spread";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Spread from "ve-vue/lib/spread"
+Vue.use(Spread)
 <ve-button @click="show = !show">Click Me</ve-button>
 <ve-spread>
     <div class="spread-bg" v-if="show"></div>

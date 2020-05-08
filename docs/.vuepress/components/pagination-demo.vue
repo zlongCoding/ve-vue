@@ -63,6 +63,8 @@ import Button from "../../../lib/button/src/button";
 import SwitchCode from "./component/SwitchCode";
 
 const content = `
+import Pagination from "ve-vue/lib/pagination"
+Vue.use(Pagination)
 <ve-pagination :throttleTag="tag" :page-count="20" :range-page="4" :beside-pages="1" v-model="value" />
 <script>
 
@@ -88,6 +90,8 @@ export default {
 <script>
 `;
 const content1 = `
+import Pagination from "ve-vue/lib/pagination"
+Vue.use(Pagination)
 <ve-pagination :hide-prev-next="true" :page-count="10" :range-page="3" :beside-pages="2" v-model="value" />
 <script>
 
@@ -102,6 +106,8 @@ export default {
 <script>
 `;
 const content2 = `
+import Pagination from "ve-vue/lib/pagination"
+Vue.use(Pagination)
 <ve-pagination :first-last-button="true" :page-count="10" :range-page="3" :beside-pages="2" v-model="value" />
 <script>
 
@@ -116,6 +122,8 @@ export default {
 <script>
 `;
 const content6 = `
+import Pagination from "ve-vue/lib/pagination"
+Vue.use(Pagination)
 <ve-pagination  :page-count="15"  :beside-pages="2" v-model="value" />
 <script>
 
@@ -130,6 +138,8 @@ export default {
 <script>
 `;
 const content5 = `
+import Pagination from "ve-vue/lib/pagination"
+Vue.use(Pagination)
 <ve-pagination  :page-count="15" v-model="value" />
 <script>
 

@@ -1,10 +1,4 @@
 {
   "plugins": [
-    ["component", 
-      {
-         "libraryName": "ve-vue",
-         "styleLibraryName": "~static"
-      }
-    ]
   ]
 }

@@ -14,6 +14,8 @@
 import Button from "../../../lib/button/src/button";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Button from "ve-vue/lib/button"
+Vue.use(Button)
    <ve-button  @click="clickBtn">德玛西亚</ve-button>
      <ve-button :disabled="true">面对疾风吧</ve-button>
      <ve-button :circle="true" @click="clickBtn">来啊互相伤害</ve-button>

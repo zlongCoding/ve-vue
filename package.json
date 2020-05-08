@@ -1,13 +1,10 @@
 {
   "name": "ve-vue",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "description": "ve-vue",
   "main": "lib/index.js",
-  "style": "package/index.css",
   "files": [
-    "lib",
-    "package",
-    "static"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -35,8 +32,9 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name index --dest package lib/index.js"
   },
+  "sideEffects": false,
   "dependencies": {
-    "ve-vue": "^0.1.9",
+    "ve-vue": "0.2.1",
     "vue": "^2.6.10",
     "vuepress": "^1.4.1"
   },

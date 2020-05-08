@@ -14,6 +14,8 @@
 import checkbox from "../../../lib/checkbox/src/checkbox";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Checkbox from "ve-vue/lib/checkbox"
+Vue.use(Checkbox)
  <p>
       <strong>Value:</strong>
       {{ checkboxStatus ? 'yes' : 'no' }}

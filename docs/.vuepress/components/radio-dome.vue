@@ -19,6 +19,8 @@
 import Radio from "../../../lib/radio/src/radio";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Radio from "ve-vue/lib/radio"
+Vue.use(Radio)
      <p>
       <strong>Value:</strong>
       {{ radioValue }}

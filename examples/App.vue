@@ -10,10 +10,11 @@
 </template>
 
 <script>
-
+// import { tooltip } from "ve-vue"
 export default {
   name: "app",
   components: {
+    // tooltip
   }
 }
 </script>

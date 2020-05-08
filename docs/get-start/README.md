@@ -14,10 +14,9 @@ title: 快速上手
 ```js
 import Vue from 'vue';
 import App from './App.vue';
-import VeUI from 've-vue';
-import 've-vue/dist/index.css'
+import VeVue from 've-vue';
 
-Vue.use(VeUI);
+Vue.use(VeVue);
 
 new Vue({
   el: '#app',
@@ -25,28 +24,31 @@ new Vue({
 });
 ```
 
-以上代码便完成了 VeUI 的引入。需要注意的是，样式文件需要单独引入。
-
+以上代码便完成了 VeUI 的引入。
+::: warning  不推荐
+这种方法是将所有组件全部引入到项目中。
+:::
 ## 按需引用
 
 我们可以只引入需要的组件，以达到减小项目体积的目的。
 
-如您只希望引入 Button 和 Input，那么需要在项目入口文件中写入：
 
 ```js
 import Vue from 'vue';
-import { Button, Input } from 've-vue';
-import 've-vue/dist/index.css'
-import App from './App.vue';
+import Tooltip from "ve-vue/lib/tooltip"
+import Button from "ve-vue/lib/button"
+Vue.use(Tooltip)
+Vue.use(Button)
 
-// Vue.component(Button.name, Button);
-// Vue.component(Input.name, Input);
 
 new Vue({
   el: '#app',
   render: h => h(App)
 });
 ```
+::: tip 通过这种方式引入的目的
+为了降低成本配置成本，在每个组件指定一个入口文件，然后就可以支持按需加载了
+:::
 
 <!-- ## 特别提醒
 

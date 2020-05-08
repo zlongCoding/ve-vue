@@ -36,6 +36,8 @@ import Slider from "../../../lib/slider/src/slider";
 import Button from "../../../lib/button/src/button";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Slider from "ve-vue/lib/slider"
+Vue.use(Slider)
  <ve-slider :min="0" :max="100" @change="handlerChange" v-model="inputValue"/>
 <script>
 
@@ -55,6 +57,8 @@ export default {
 <script>
 `;
 const content1 = `
+import Slider from "ve-vue/lib/slider"
+Vue.use(Slider)
 <ve-slider :min="0" :max="100" :startValue="20" :step="20" @change="handlerChange" v-model="inputValue"/>
 
 <script>

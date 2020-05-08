@@ -54,6 +54,9 @@
 
 <script>
 const content = `
+import Tooltip from "ve-vue/lib/tooltip"
+Vue.use(Tooltip)
+
 <ve-tooltip position="top">
     <template slot="content">
         tooltip
@@ -103,7 +106,9 @@ const content = `
         tooltip
     </template>
     <ve-button>tooltip</ve-button>
-</ve-tooltip>`;
+</ve-tooltip>
+
+`;
 import tooltip from "../../../lib/tooltip/src/tooltip.vue";
 import Button from "../../../lib/button/src/button";
 // import Button from "../../../src/packages/button/button.vue";

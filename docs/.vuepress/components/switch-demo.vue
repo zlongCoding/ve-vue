@@ -16,6 +16,8 @@
 import Switch from "../../../lib/switch/src/switch";
 import SwitchCode from "./component/SwitchCode";
 const content = `
+import Switch from "ve-vue/lib/switch"
+Vue.use(Tooltip)
     <div class="switch-status">
       <ve-switch inactiveText="开" activeText="关"  @change="hanlderChange">
     </ve-switch>
