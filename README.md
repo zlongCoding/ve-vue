@@ -1,5 +1,5 @@
 # ve-vue
->工作中一般不太喜欢引入第三方的包。此库的作用是为了方便使用，各个组件之间完全独立，同时方便学习
+>工作中一般不太喜欢引入第三方的包。此库的作用是为了方便使用，各个组件之间完全独立，同时方便学习交流。
 
 ```
 npm install ve-vue -S 或者 yarn add ve-vue
@@ -16,4 +16,4 @@ npm install ve-vue -S 或者 yarn add ve-vue
 
 
 [项目地址](https://zlongcoding.github.io/ve-vue)
-###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md)
+<!-- ###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md) -->
