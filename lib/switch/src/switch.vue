@@ -18,7 +18,10 @@
       @click.prevent="changeSwitchValue(!checked)"
     ></span>
     <span v-if="!styleType" @click.prevent="changeSwitchValue(!checked)">
-      <span class="ve-switch-label-inline" :class="[checked ? 've-switch-label-inline-left': 've-switch-label-inline-right' ]">test</span>
+      <span
+        class="ve-switch-label-inline"
+        :class="[checked ? 've-switch-label-inline-left': 've-switch-label-inline-right' ]"
+      >test</span>
     </span>
     <span
       v-if="styleType && activeText"
@@ -77,7 +80,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .ve-switch {
   display: inline-flex;
   align-items: center;
@@ -86,27 +89,27 @@ export default {
   line-height: 20px;
   height: 20px;
   vertical-align: middle;
-}
-.ve-switch-input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  margin: 0;
-}
-.ve-switch-label {
-  transition: 0.4s;
-  height: 20px;
-  display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
-  vertical-align: middle;
-  color: #303133;
-}
-.ve-switch-label * {
-  line-height: 1;
-  display: inline-block;
-  user-select: none;
+  .ve-switch-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  .ve-switch-label {
+    transition: 0.4s;
+    height: 20px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: #303133;
+    * {
+      line-height: 1;
+      display: inline-block;
+      user-select: none;
+    }
+  }
 }
 .ve-switch-label-left {
   margin-right: 10px;
@@ -168,13 +171,11 @@ export default {
   top: 0;
   font-weight: 600;
   color: #fff;
-  /* height: 100%; */
-  /* line-height: 100%; */
 }
-.ve-switch-label-inline-right{
-   right: 8px;
+.ve-switch-label-inline-right {
+  right: 8px;
 }
-.ve-switch-label-inline-left{
+.ve-switch-label-inline-left {
   left: 8px;
 }
 </style>

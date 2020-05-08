@@ -50,7 +50,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss" >
 .ve-button {
   display: inline-block;
   line-height: 1;
@@ -68,21 +68,21 @@ export default {
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 4px;
-}
-.ve-button:hover{
-  background-color: #ff5f00;
-  border-color: #ff5f00;
-  color: #fff;
+  &:hover {
+    background-color: #ff5f00;
+    border-color: #ff5f00;
+    color: #fff;
+    &:disabled,
+    &:disabled:hover {
+      cursor: not-allowed;
+      background-color: #fff;
+      border-color: #cecece;
+      color: #ccc;
+    }
+  }
 }
 
-.ve-button:disabled, .ve-button:disabled:hover {
-  cursor: not-allowed;
-  background-color: #fff;
-  border-color: #cecece;
-  color: #ccc;
-}
-.ve-button-circle{
+.ve-button-circle {
   border-radius: 20px;
 }
-
 </style>

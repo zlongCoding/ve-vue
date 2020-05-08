@@ -2,7 +2,7 @@
   <div class="ve-tooltip" ref="veTooltip">
     <div
       ref="contentWrapper"
-      class="content-wrapper"
+      class="ve-tooltip-content-wrapper"
       v-if="visible"
       :class="[{ [`ve-position-${this.position}`]: true }, styleEffect]"
     >
@@ -149,147 +149,181 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" >
 .ve-tooltip {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-.content-wrapper {
-  border-radius: 4px;
-  position: absolute;
-  padding: 0.5em 1em;
-  max-width: 20em;
-  word-wrap: break-word;
+  .ve-tooltip-content-wrapper {
+    border-radius: 4px;
+    position: absolute;
+    padding: 0.5em 1em;
+    max-width: 20em;
+    word-wrap: break-word;
+    &::before,
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      position: absolute;
+    }
+    &.ve-position-top {
+      margin-top: -8px;
+      transform: translateY(-100%);
+      &::before,
+      &::after {
+        left: 50%;
+        margin-left: -8px;
+      }
+      &::before {
+        border-bottom: none;
+        top: 100%;
+      }
+      &::after {
+        border-bottom: none;
+        top: calc(100% - 1px);
+      }
+      &.ve-position-border {
+        &::before {
+          border-top-color: #aaa;
+        }
+        &::after {
+          border-top-color: #fff;
+        }
+      }
+      &.ve-position-no-border {
+        &::before {
+          border-top-color: #000;
+        }
+        &::after {
+          border-top-color: #000;
+        }
+      }
+      &.ve-position-border {
+        &::before {
+          border-top-color: #aaa;
+        }
+        &::after {
+          border-top-color: #fff;
+        }
+      }
+      &.ve-position-no-border {
+        &::before {
+          border-top-color: #000;
+        }
+        &::after {
+          border-top-color: #000;
+        }
+      }
+    }
+    &.ve-position-bottom {
+      margin-top: 8px;
+      &::before,
+      &::after {
+        left: 50%;
+        margin-left: -8px;
+      }
+      &::before {
+        border-top: none;
+        bottom: 100%;
+      }
+      &::after {
+        border-top: none;
+        bottom: calc(100% - 1px);
+      }
+      &.ve-position-border {
+        &::before {
+          border-bottom-color: #aaa;
+        }
+        &::after {
+          border-bottom-color: #fff;
+        }
+      }
+      &.ve-position-no-border {
+        &::before {
+          border-bottom-color: #000;
+        }
+        &::after {
+          border-bottom-color: #000;
+        }
+      }
+    }
+
+    &.ve-position-left {
+      transform: translateX(-100%);
+      margin-left: -4px;
+      &::before,
+      &::after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        border-right: none;
+        left: 100%;
+      }
+      &::after {
+        border-right: none;
+        left: calc(100% - 1px);
+      }
+      &.ve-position-border {
+        &::before {
+          border-left-color: #aaa;
+        }
+        &::after {
+          border-left-color: #fff;
+        }
+      }
+      &.ve-position-no-border {
+        &::before {
+          border-left-color: #000;
+        }
+        &::after {
+          border-left-color: #000;
+        }
+      }
+    }
+    &.ve-position-right {
+      margin-left: 14px;
+      &::before,
+      &::after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        border-left: none;
+        right: 100%;
+      }
+      &::after {
+        border-left: none;
+        right: calc(100% - 1px);
+      }
+      &.ve-position-border {
+        &::before {
+          border-right-color: #aaa;
+        }
+        &::after {
+          border-right-color: #fff;
+        }
+      }
+      &.ve-position-no-border {
+        &::before {
+          border-right-color: #000;
+        }
+        &::after {
+          border-right-color: #000;
+        }
+      }
+    }
 }
-.content-wrapper::before,
-.content-wrapper::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  position: absolute;
-}
-.content-wrapper.ve-position-top {
-  margin-top: -8px;
-  transform: translateY(-100%);
-}
-.content-wrapper.ve-position-top::before,
-.content-wrapper.ve-position-top::after {
-  left: 50%;
-  margin-left: -8px;
-}
-.content-wrapper.ve-position-top::before {
-  border-bottom: none;
-  top: 100%;
-}
-.content-wrapper.ve-position-top::after {
-  border-bottom: none;
-  top: calc(100% - 1px);
-}
-.content-wrapper.ve-position-top.ve-position-border::before {
-  border-top-color: #aaa;
-}
-.content-wrapper.ve-position-top.ve-position-border::after {
-  border-top-color: #fff;
-}
-.content-wrapper.ve-position-top.ve-position-no-border::before {
-  border-top-color: #000;
-}
-.content-wrapper.ve-position-top.ve-position-no-border::after {
-  border-top-color: #000;
-}
-.content-wrapper.ve-position-bottom {
-  margin-top: 8px;
-}
-.content-wrapper.ve-position-bottom::before,
-.content-wrapper.ve-position-bottom::after {
-  left: 50%;
-  margin-left: -8px;
-}
-.content-wrapper.ve-position-bottom::before {
-  border-top: none;
-  bottom: 100%;
-}
-.content-wrapper.ve-position-bottom::after {
-  border-top: none;
-  bottom: calc(100% - 1px);
-}
-.content-wrapper.ve-position-bottom.ve-position-border::before {
-  border-bottom-color: #aaa;
-}
-.content-wrapper.ve-position-bottom.ve-position-border::after {
-  border-bottom-color: #fff;
-}
-.content-wrapper.ve-position-bottom.ve-position-no-border::before {
-  border-bottom-color: #000;
-}
-.content-wrapper.ve-position-bottom.ve-position-no-border::after {
-  border-bottom-color: #000;
-}
-.content-wrapper.ve-position-left {
-  transform: translateX(-100%);
-  margin-left: -4px;
-}
-.content-wrapper.ve-position-left::before,
-.content-wrapper.ve-position-left::after {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.content-wrapper.ve-position-left::before {
-  border-right: none;
-  left: 100%;
-}
-.content-wrapper.ve-position-left::after {
-  border-right: none;
-  left: calc(100% - 1px);
-}
-.content-wrapper.ve-position-left.ve-position-border::before {
-  border-left-color: #aaa;
-}
-.content-wrapper.ve-position-left.ve-position-border::after {
-  border-left-color: #fff;
-}
-.content-wrapper.ve-position-left.ve-position-no-border::before {
-  border-left-color: #000;
-}
-.content-wrapper.ve-position-left.ve-position-no-border::after {
-  border-left-color: #000;
-}
-.content-wrapper.ve-position-right {
-  margin-left: 14px;
-}
-.content-wrapper.ve-position-right::before,
-.content-wrapper.ve-position-right::after {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.content-wrapper.ve-position-right::before {
-  border-left: none;
-  right: 100%;
-}
-.content-wrapper.ve-position-right::after {
-  border-left: none;
-  right: calc(100% - 1px);
-}
-.content-wrapper.ve-position-right.ve-position-border::before {
-  border-right-color: #aaa;
-}
-.content-wrapper.ve-position-right.ve-position-border::after {
-  border-right-color: #fff;
-}
-.content-wrapper.ve-position-right.ve-position-no-border::before {
-  border-right-color: #000;
-}
-.content-wrapper.ve-position-right.ve-position-no-border::after {
-  border-right-color: #000;
-}
-.content-wrapper.ve-position-border {
+
+.ve-tooltip-content-wrapper.ve-position-border {
   border: 1px solid #aaa;
   color: #000;
   background: #fff;
 }
-.content-wrapper.ve-position-no-border {
+.ve-tooltip-content-wrapper.ve-position-no-border {
   border: 1px solid #000;
   color: #fff;
   background: #000;
