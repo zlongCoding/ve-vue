@@ -1,5 +1,5 @@
 ---
-title: pagination - btn样式
+title: pagination 分页
 sidebarDepth: 2
 ---
 
