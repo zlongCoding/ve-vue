@@ -23,17 +23,15 @@ npm install ve-vue -S 或者 yarn add ve-vue
 [slider滑块源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/slider)
 
 [slider滑块dome](https://zlongcoding.github.io/ve-vue/components/slider.html)
+
+![slider滑块](./github/image/slider/1.gif)
+![slider滑块](./github/image/slider/2.gif)
 ## vue radio 单选按钮
 >如果样式不行，改一下css就好了
 
 [radio源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/radio)
-
-[radio-dome](https://zlongcoding.github.io/ve-vue/components/radio.html)
-```
-```
-![slider滑块](./github/image/slider/1.gif)
-![slider滑块](./github/image/slider/2.gif)
-
+[radio dome](https://zlongcoding.github.io/ve-vue/components/radio.html)
+![radio单选按钮](./github/image/radio/1.gif)
 
 [项目地址](https://zlongcoding.github.io/ve-vue)
 <!-- ###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md) -->
