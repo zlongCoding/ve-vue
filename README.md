@@ -4,6 +4,8 @@
 ```
 npm install ve-vue -S 或者 yarn add ve-vue
 ```
+[项目地址](https://zlongcoding.github.io/ve-vue)
+
 ## vue pagination 分页
 >能够适应大部分场景，默认使用的是bootstrap的样式，如果想自定义样式，可以去源码中更改
 
@@ -35,5 +37,5 @@ npm install ve-vue -S 或者 yarn add ve-vue
 
 ![radio单选按钮](./github/image/radio/1.gif)
 
-[项目地址](https://zlongcoding.github.io/ve-vue)
+
 <!-- ###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md) -->
