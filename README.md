@@ -44,5 +44,13 @@ npm install ve-vue -S 或者 yarn add ve-vue
 
 ![checkbox单选按钮](./github/image/checkbox/1.gif)
 
+## vue switch 复选框
+>自定义的话，改一下css就好了
+
+[switch源码](https://github.com/zlongCoding/ve-vue/tree/master/lib/switch)
+
+[switch dome](https://zlongcoding.github.io/ve-vue/components/switch.html)
+
+![switch单选按钮](./github/image/switch/1.gif)
 
 <!-- ###### [开发](https://github.com/zlongCoding/ve-vue#CODE.md) -->
