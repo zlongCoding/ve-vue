@@ -51,6 +51,7 @@ export default {
 }
 </script>
 <style lang="scss" >
+$bg: #3498db;
 .ve-button {
   display: inline-block;
   line-height: 1;
@@ -69,8 +70,8 @@ export default {
   font-size: 14px;
   border-radius: 4px;
   &:hover {
-    background-color: #ff5f00;
-    border-color: #ff5f00;
+    background-color: $bg;
+    border-color: $bg;
     color: #fff;
     &:disabled,
     &:disabled:hover {

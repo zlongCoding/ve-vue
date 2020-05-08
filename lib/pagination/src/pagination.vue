@@ -260,6 +260,8 @@ export default {
 </script>
 
 <style lang="scss" >
+$bg: #3498db;
+$color: #3498db;
 .ve-pagination {
   display: inline-block;
   padding-left: 0;
@@ -273,7 +275,7 @@ export default {
       padding: 6px 12px;
       margin-left: -1px;
       line-height: 1.42857143;
-      color: #337ab7;
+      color: $color;
       text-decoration: none;
       background-color: #fff;
       border: 1px solid #ddd;
@@ -288,7 +290,7 @@ export default {
       &:hover,
       &:focus {
         z-index: 3;
-        color: #23527c;
+        color: $color;
         background-color: #eee;
         border-color: #ddd;
       }
@@ -304,8 +306,8 @@ export default {
     z-index: 2;
     color: #fff;
     cursor: default;
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: $bg;
+    border-color: $bg;
   }
   .disabled > a,
   .disabled > a:hover,

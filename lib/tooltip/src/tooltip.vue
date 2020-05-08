@@ -34,7 +34,7 @@ export default {
     },
     effect: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data () {
@@ -150,182 +150,184 @@ export default {
 </script>
 
 <style lang="scss" >
+$border-color: #3498db;
+$no-border-color: #000;
 .ve-tooltip {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-  .ve-tooltip-content-wrapper {
-    border-radius: 4px;
+.ve-tooltip-content-wrapper {
+  border-radius: 4px;
+  position: absolute;
+  padding: 0.5em 1em;
+  max-width: 20em;
+  word-wrap: break-word;
+  &::before,
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
     position: absolute;
-    padding: 0.5em 1em;
-    max-width: 20em;
-    word-wrap: break-word;
+  }
+  &.ve-position-top {
+    margin-top: -8px;
+    transform: translateY(-100%);
     &::before,
     &::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border: 8px solid transparent;
-      position: absolute;
+      left: 50%;
+      margin-left: -8px;
     }
-    &.ve-position-top {
-      margin-top: -8px;
-      transform: translateY(-100%);
-      &::before,
-      &::after {
-        left: 50%;
-        margin-left: -8px;
-      }
+    &::before {
+      border-bottom: none;
+      top: 100%;
+    }
+    &::after {
+      border-bottom: none;
+      top: calc(100% - 1px);
+    }
+    &.ve-position-border {
       &::before {
-        border-bottom: none;
-        top: 100%;
+        border-top-color: $border-color;
       }
       &::after {
-        border-bottom: none;
-        top: calc(100% - 1px);
-      }
-      &.ve-position-border {
-        &::before {
-          border-top-color: #aaa;
-        }
-        &::after {
-          border-top-color: #fff;
-        }
-      }
-      &.ve-position-no-border {
-        &::before {
-          border-top-color: #000;
-        }
-        &::after {
-          border-top-color: #000;
-        }
-      }
-      &.ve-position-border {
-        &::before {
-          border-top-color: #aaa;
-        }
-        &::after {
-          border-top-color: #fff;
-        }
-      }
-      &.ve-position-no-border {
-        &::before {
-          border-top-color: #000;
-        }
-        &::after {
-          border-top-color: #000;
-        }
+        border-top-color: #fff;
       }
     }
-    &.ve-position-bottom {
-      margin-top: 8px;
-      &::before,
-      &::after {
-        left: 50%;
-        margin-left: -8px;
-      }
+    &.ve-position-no-border {
       &::before {
-        border-top: none;
-        bottom: 100%;
+        border-top-color: $border-color;
       }
       &::after {
-        border-top: none;
-        bottom: calc(100% - 1px);
-      }
-      &.ve-position-border {
-        &::before {
-          border-bottom-color: #aaa;
-        }
-        &::after {
-          border-bottom-color: #fff;
-        }
-      }
-      &.ve-position-no-border {
-        &::before {
-          border-bottom-color: #000;
-        }
-        &::after {
-          border-bottom-color: #000;
-        }
+        border-top-color: $border-color;
       }
     }
+    &.ve-position-border {
+      &::before {
+        border-top-color: $border-color;
+      }
+      &::after {
+        border-top-color: #fff;
+      }
+    }
+    &.ve-position-no-border {
+      &::before {
+        border-top-color:$no-border-color;
+      }
+      &::after {
+        border-top-color:$no-border-color;
+      }
+    }
+  }
+  &.ve-position-bottom {
+    margin-top: 8px;
+    &::before,
+    &::after {
+      left: 50%;
+      margin-left: -8px;
+    }
+    &::before {
+      border-top: none;
+      bottom: 100%;
+    }
+    &::after {
+      border-top: none;
+      bottom: calc(100% - 1px);
+    }
+    &.ve-position-border {
+      &::before {
+        border-bottom-color: $border-color;
+      }
+      &::after {
+        border-bottom-color: #fff;
+      }
+    }
+    &.ve-position-no-border {
+      &::before {
+        border-bottom-color:$no-border-color;
+      }
+      &::after {
+        border-bottom-color:$no-border-color;
+      }
+    }
+  }
 
-    &.ve-position-left {
-      transform: translateX(-100%);
-      margin-left: -4px;
-      &::before,
-      &::after {
-        top: 50%;
-        transform: translateY(-50%);
-      }
+  &.ve-position-left {
+    transform: translateX(-100%);
+    margin-left: -4px;
+    &::before,
+    &::after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      border-right: none;
+      left: 100%;
+    }
+    &::after {
+      border-right: none;
+      left: calc(100% - 1px);
+    }
+    &.ve-position-border {
       &::before {
-        border-right: none;
-        left: 100%;
+        border-left-color: $border-color;
       }
       &::after {
-        border-right: none;
-        left: calc(100% - 1px);
-      }
-      &.ve-position-border {
-        &::before {
-          border-left-color: #aaa;
-        }
-        &::after {
-          border-left-color: #fff;
-        }
-      }
-      &.ve-position-no-border {
-        &::before {
-          border-left-color: #000;
-        }
-        &::after {
-          border-left-color: #000;
-        }
+        border-left-color: #fff;
       }
     }
-    &.ve-position-right {
-      margin-left: 14px;
-      &::before,
-      &::after {
-        top: 50%;
-        transform: translateY(-50%);
-      }
+    &.ve-position-no-border {
       &::before {
-        border-left: none;
-        right: 100%;
+        border-left-color:$no-border-color;
       }
       &::after {
-        border-left: none;
-        right: calc(100% - 1px);
-      }
-      &.ve-position-border {
-        &::before {
-          border-right-color: #aaa;
-        }
-        &::after {
-          border-right-color: #fff;
-        }
-      }
-      &.ve-position-no-border {
-        &::before {
-          border-right-color: #000;
-        }
-        &::after {
-          border-right-color: #000;
-        }
+        border-left-color:$no-border-color;
       }
     }
+  }
+  &.ve-position-right {
+    margin-left: 14px;
+    &::before,
+    &::after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      border-left: none;
+      right: 100%;
+    }
+    &::after {
+      border-left: none;
+      right: calc(100% - 1px);
+    }
+    &.ve-position-border {
+      &::before {
+        border-right-color: $border-color;
+      }
+      &::after {
+        border-right-color: #fff;
+      }
+    }
+    &.ve-position-no-border {
+      &::before {
+        border-right-color:$no-border-color;
+      }
+      &::after {
+        border-right-color:$no-border-color;
+      }
+    }
+  }
 }
 
 .ve-tooltip-content-wrapper.ve-position-border {
-  border: 1px solid #aaa;
+  border: 1px solid $border-color;
   color: #000;
   background: #fff;
 }
 .ve-tooltip-content-wrapper.ve-position-no-border {
-  border: 1px solid #000;
+  border: 1px solid $no-border-color;
   color: #fff;
-  background: #000;
+  background: $no-border-color;
 }
 </style>

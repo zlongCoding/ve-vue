@@ -97,6 +97,7 @@ export default {
 }
 </script>
 <style lang="scss">
+$bg: #3498db;
 .ve-radio {
   display: inline-block;
   > input {
@@ -120,7 +121,7 @@ export default {
     }
     label > .input-box {
       display: inline-block;
-      border: 1px solid #000;
+      border: 1px solid $bg;
       border-radius: 50%;
       margin: 0;
       padding: 0;
@@ -140,7 +141,7 @@ export default {
         height: 10px;
         width: 10px;
         transform: translate(-50%, -50%) scale(0);
-        background: #000;
+        background: $bg;
         border-radius: 50%;
         opacity: 0;
         transition: all 0.2s;

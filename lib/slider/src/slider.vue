@@ -113,6 +113,7 @@ export default {
 </script>
 
 <style lang="scss">
+$bg: #3498db;
 .ve-slider {
   position: relative;
   box-sizing: content-box;
@@ -137,7 +138,7 @@ export default {
     height: 100%;
     transition: .2s;
     &-style {
-      background-color: #3498db;
+      background-color: $bg;
       border-radius: 15px;
     }
   }

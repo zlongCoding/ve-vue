@@ -1,6 +1,6 @@
 <template>
   <SwitchCode :content="content">
-    <button @click="show = !show">Click Me</button>
+    <ve-button @click="show = !show">Click Me</ve-button>
     <ve-spread>
       <div class="spread-bg" v-if="show"></div>
     </ve-spread>
@@ -10,6 +10,7 @@
 
 <script>
 // import Button from "../../../src/packages/button/button.vue";
+import Button from "../../../lib/button/src/button";
 import Spread from "../../../lib/spread/src/spread";
 import SwitchCode from "./component/SwitchCode";
 const content = `
@@ -18,7 +19,6 @@ const content = `
     <div class="spread-bg" v-if="show"></div>
 </ve-spread>
 <script>
-import {Spread,Button} from ve-vue
 
 export default {
   
@@ -32,7 +32,7 @@ export default {
 `;
 export default {
   components: {
-    // "ve-button": Button,
+    "ve-button": Button,
     "ve-spread": Spread,
     SwitchCode: SwitchCode
   },
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$bg-yellow: #409eff;
+$bg-yellow: #3498db;
 .spread-bg {
   margin: 10px auto;
   width: 100%;

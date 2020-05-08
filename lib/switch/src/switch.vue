@@ -81,6 +81,8 @@ export default {
 </script>
 
 <style lang="scss">
+$active-bg-color: #3498db;
+$default-bg-color: #dcdfe6;
 .ve-switch {
   display: inline-flex;
   align-items: center;
@@ -123,11 +125,11 @@ export default {
   position: relative;
   /* width: 40px; */
   height: 20px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid $default-bg-color;
   outline: none;
   border-radius: 10px;
   box-sizing: border-box;
-  background: #dcdfe6;
+  background: $default-bg-color;
   cursor: pointer;
   transition: border-color 0.3s, background-color 0.3s;
   vertical-align: middle;
@@ -145,15 +147,15 @@ export default {
 }
 
 .ve-switch.is-checked .ve-switch-custom {
-  border-color: #409eff;
-  background-color: #409eff;
+  border-color: $active-bg-color;
+  background-color: $active-bg-color;
 }
 .ve-switch.is-checked .ve-switch-custom:after {
   left: 100%;
   margin-left: -17px;
 }
 .is-checked-active {
-  color: #409eff;
+  color: $active-bg-color;
 }
 
 /* 第二种样式 */

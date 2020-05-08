@@ -64,6 +64,7 @@ export default {
 }
 </script>
 <style lang="scss">
+$bg: #3498db;
 .ve-checkout {
   * {
     user-select: none;
@@ -121,8 +122,8 @@ export default {
 //这里是checkBox自定义样式的写法
 .ve-checkout {
   input + label > .ve-checkout-box {
-    border-color: #ff5f00;
-    background: #ff5f00;
+    border-color: $bg;
+    background: $bg;
     .ve-checkout-box-tick {
       path {
         stroke: #fff;
