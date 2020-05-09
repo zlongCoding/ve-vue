@@ -26,6 +26,7 @@ module.exports = {
           "/components/radio.md",
           "/components/pagination.md",
           "/components/button.md",
+          "/components/calendar.md",
           "/components/slider.md",
         ],
       },

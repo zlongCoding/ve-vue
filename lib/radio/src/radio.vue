@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  name: "ve-radio",
   model: {
     prop: "modelValue",
     event: "input"

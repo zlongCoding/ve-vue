@@ -63,6 +63,7 @@
 
 <script>
 export default {
+  name: "ve-pagination",
   data () {
     return {
       innerValue: 1,

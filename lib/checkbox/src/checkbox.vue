@@ -22,6 +22,7 @@
 </template>
 <script>
 export default {
+  name: "ve-checkbox",
   model: {
     prop: "modelValue",
     event: "input"
