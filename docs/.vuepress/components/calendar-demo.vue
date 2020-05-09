@@ -1,41 +1,56 @@
-
 <template>
   <SwitchCode :content="content">
-     <ve-calendar  />
+    <p>时间选择</p>
+    <ve-calendar />
+    <p>区间选择</p>
+    <ve-calendar dateRange />
+
+    <p>限制最少选择的时间是当前时间</p>
+    <ve-calendar dateRange limitBool />
+    <p>限制最少选择的时间是昨天</p>
+    <ve-calendar dateRange limitBool :limitDay="new Date(yesterday).getTime()" />
   </SwitchCode>
 </template>
-
 
 <script>
 // import Button from "../../../src/packages/button/button.vue";
 import Calendar from "../../../lib/calendar/src/calendar";
 import SwitchCode from "./component/SwitchCode";
+// import Calendar from "./component/calendar";
 const content = `
 import Switch from "ve-vue/lib/switch"
-Vue.use(Tooltip)
-    <div class="switch-status">
-      <ve-switch inactiveText="开" activeText="关"  @change="hanlderChange">
-    </ve-switch>
-    </div>
-      
-    <div class="result">状态： {{text}}</div>
-    <ve-switch :width="80" :styleType="false" inactiveText="开" activeText="关" />
-
-
+Vue.use(Calendar)
+<p>时间选择</p>
+<ve-calendar  />
+<p>区间选择</p>
+<ve-calendar  dateRange/>
+     
+<p>限制最少选择的时间是当前时间</p>
+<ve-calendar  dateRange limitBool />
+<p>限制最少选择的时间是昨天</p>
+<ve-calendar  dateRange limitBool :limitDay="new Date(yesterday).getTime()"/>
+function getYesterday() {
+  var day = new Date();
+  day.setTime(day.getTime() - 24 * 60 * 60 * 1000);
+  return day.getFullYear() + "-" + (day.getMonth() + 1) + "-" + day.getDate();
+}
 export default {
     data(){
         return{
-            text: '开'
+            yesterday: getYesterday()
         }
     },
     methods: {
-    hanlderChange(val){
-       this.text = val ? '关' : '开'
-    }
+   
   }
 }
 <script>
 `;
+function getYesterday() {
+  var day = new Date();
+  day.setTime(day.getTime() - 24 * 60 * 60 * 1000);
+  return day.getFullYear() + "-" + (day.getMonth() + 1) + "-" + day.getDate();
+}
 export default {
   components: {
     // "hy-button": Button,
@@ -47,7 +62,8 @@ export default {
       content: content.trim(),
       showCode: false,
       text: "开",
-      startTime: '',
+      startTime: "",
+      yesterday: getYesterday()
     };
   },
   methods: {
