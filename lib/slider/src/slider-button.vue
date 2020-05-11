@@ -76,9 +76,7 @@ export default {
 
       diff = (this.currentX - this.startX) / this.$parent.sliderSize * 100
       this.newPosition = this.startPosition + diff
-      // console.log(this.startX, "start-------", this.currentX, "=====onDragging", diff)
       this.setPosition(this.newPosition)
-      // this.$emit("dragStart", e)
     },
     dragDown (event) {
       this.onDragStart(event)

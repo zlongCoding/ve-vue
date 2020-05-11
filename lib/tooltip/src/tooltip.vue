@@ -104,7 +104,6 @@ export default {
           left: left + width
         }
       }
-      console.log(this.position)
       contentWrapper.style.top = positions[this.position].top + "px"
       contentWrapper.style.left = positions[this.position].left + "px"
     },

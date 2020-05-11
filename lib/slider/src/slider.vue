@@ -97,7 +97,6 @@ export default {
     resetSize () {
       if (this.$refs.veSlider) {
         this.sliderSize = this.$refs.veSlider["clientWidth"]
-        // console.log(this.sliderSize)
       }
     },
     emitChangeSlider () {
