@@ -30,6 +30,7 @@ module.exports = {
           "/components/calendarTimeLine.md",
           "/components/calendarTimeLine2.md",
           "/components/slider.md",
+          "/components/upload.md",
         ],
       },
     ],
