@@ -28,6 +28,7 @@ module.exports = {
           "/components/button.md",
           "/components/calendar.md",
           "/components/calendarTimeLine.md",
+          "/components/calendarTimeLine2.md",
           "/components/slider.md",
         ],
       },
